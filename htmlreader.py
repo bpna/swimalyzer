@@ -9,6 +9,10 @@ class SwimParser(HTMLParser):
         if (tag == 'pre'):
             self.results_found = True
 
+    def handle_endtag(self, tag):
+        if (tag == 'pre'):
+            self.results_found = False
+
     def handle_data(self, data):
         if self.results_found:
             print(data)
