@@ -9,3 +9,5 @@ if __name__ == "__main__":
 
     swim_reader = SwimParser()
     swim_reader.feed(args.htmlfile.read())
+    results = swim_reader.get_results()
+    print(results)
