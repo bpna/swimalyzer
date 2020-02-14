@@ -1,8 +1,10 @@
 import argparse
-from htmlreader import SwimParser
+from html_reader import SwimParser
+import results_manager
 
 if __name__ == "__main__":
-    arg_parser = argparse.ArgumentParser(description='Parse a swim results file')
+    arg_parser = argparse.ArgumentParser(
+        description='Parse a swim results file')
     arg_parser.add_argument('htmlfile', type=open,
         help='name of the HTML file to parse')
     args = arg_parser.parse_args()
